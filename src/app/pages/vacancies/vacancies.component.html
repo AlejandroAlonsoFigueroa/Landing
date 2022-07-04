@@ -1,0 +1,149 @@
+<div class = "white-container">
+<div style = "height: 200px;"></div>
+<div class = "vacancies-container">
+    <div class = "elements-container">
+        <div class = "section-1">
+            <div class = "vacancie-description-container">
+
+                <div class = "text-section">
+                    <p class = "blue-text">VACANTES/PROGRAMADOR FULL STACK</p>
+                    <p class = "vacancie-name">PROGRAMADOR <br><span>FULL STACK</span></p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+
+                </div>
+
+                <div class = "image-computer-section"> 
+                    <img src = "./assets/img/specific-vacancie/computer-photo.png">
+                   
+
+                </div>
+
+            </div>
+
+            <div  class = "job-information">
+               <div class = "job-element">
+                    <img class= "job-information-icon" src = "../../../assets/img/specific-vacancie/ubication-icon.svg">
+                    <div class = "text-job-information">
+                        <p class = "black-letters">{{oppenedVacancie.location}}</p>
+                        <p class = "normal-letters">Ubicación</p>
+                    </div>
+               </div>
+
+               <div class = "job-element">
+                    <img class= "job-information-icon" src = "../../../assets/img/specific-vacancie/coin.svg">
+                    <div class = "text-job-information">
+                        <p class = "black-letters">{{oppenedVacancie.salary}}</p>
+                        <p class = "normal-letters">Salario</p>
+                    </div>
+
+                </div>
+
+               <div class = "job-element">
+                    <img class= "job-information-icon" src = "../../../assets/img/specific-vacancie/clock.svg">
+                    <div class = "text-job-information">
+                        <p class = "black-letters">{{oppenedVacancie.hoursOfWork}}</p>
+                        <p class = "normal-letters">Horario</p>
+                    </div>
+
+               </div>
+
+            </div>
+
+        </div>
+
+        <div class = "section-2">
+
+            <div class = "job-requirements">
+                <div class = "knowledge">
+                    <p class = "job-requirements-main-text">Conocimientos</p>
+                    <div *ngFor = "let tecnology of oppenedVacancie.knowledge">
+                        <div class = "arrow-description-container">
+                            <div><img class = "red-arrow" src = "../../../assets/img/coding-man.jpg"></div>
+                            <p class = "jobs-text">{{tecnology}}</p>
+                        </div> 
+                       
+                    </div>
+                </div>
+
+                <div class = "requisites">
+                    <p class = "job-requirements-main-text">Requisitos</p>
+
+                    <div *ngFor = "let myRequisite of oppenedVacancie.requisites">
+                        <div class = "arrow-description-container">
+                            <div><img class = "red-arrow" src = "../../../assets/img/coding-man.jpg"></div>
+                            <p class = "jobs-text">{{myRequisite}}</p>
+                        </div> 
+                        
+                    </div>
+                   
+                    
+                </div>
+
+                <div class = "we-offer">
+                    <p class = "job-requirements-main-text">Ofrecemos</p>
+
+                    <div *ngFor = "let myOffer of oppenedVacancie.weOffer">
+                        <div class = "arrow-description-container">
+                            <div><img class = "red-arrow" src = "../../../assets/img/coding-man.jpg"></div>
+                            <p class = "jobs-text">{{myOffer}}</p>
+                        </div> 
+                        
+                        
+
+                    </div>
+                   
+                   
+                </div>
+
+            </div>
+
+            <form action = "llamaPHP.php" method = "POST" class = "blue-box-container">
+                <div class = "my-blue-box">
+                    <div><input type = "text" placeholder = "Nombre" name = "nameSender" required /></div>
+                    <div><input type = "text" placeholder = "Teléfono" name = "telephoneSender" required/></div>
+                    <div><input type = "text" placeholder = "Correo electrónico" name = "emailSender" required/></div>
+                    <div><input placeholder = "Mensaje" name = "messageSender" required/></div>
+                    
+
+                   
+
+                </div>
+
+                <div class = "bottom-button-container">
+                    <div class = "vacancie-button-container" >
+               
+                        <div class = "dark-button">
+                            <p class = "dark-button-element" >Enviar</p>
+            
+                            <p class = "dark-button-element"> -> </p>
+                        </div> 
+        
+                    </div>
+                </div>
+
+    
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+
+
+
+<!--Nombre, telèfono, correo, mensaje -->
+
+
+
+

@@ -1,0 +1,411 @@
+@import '../../../theme/styles/styles.scss';
+
+@include themify() {
+
+  /*///////////////////// NEW INPUTS /////////////////////*/
+
+  
+
+  .dark-button{
+    background-color: #0A0A4F;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 41px;
+    border-radius: 17px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .dark-button-element{
+    width: fit-content;
+    color: white;
+    text-align: center;
+    font: normal normal medium 13px/16px Metropolis;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+  }
+  .moon{
+    position: absolute;
+    
+    bottom: 0;
+    left: 0;
+  }
+  .red-field{
+    display: none;
+  }
+  
+    .contact-section {
+        display: flex;
+        padding: 62px 0px;
+        background: themed(background);
+    
+        .mobile-message-sending-container {
+          display: none;
+          padding: 50px 62px 0px 62px;
+          align-items: flex-end;
+    
+          .contact-section-logo {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding-top: 46px;
+    
+            .logo-container {
+              width: 91px;
+              height: 30px;
+    
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+    
+        .contact-form {
+          justify-content: space-between;
+          height: 422px;
+          border-radius: 0px 17px 17px 0px;;
+         // background-color: themed(primaryColor);
+          padding: 67px 0px 67px 0;
+          background-color: #0A0A4F;
+          position: relative;
+    
+          .cable-spaceman{
+            position: absolute;
+            top: -140px;
+            left: 30px;
+          }
+    
+    
+          .input-container {
+            padding-right: 67px;
+            width: 80%;
+            z-index: 10;
+    
+            .input-style, .textarea-style {
+              padding-bottom: 10px;
+              padding-left: 15px;
+              line-height: 27px;
+              font-size: 13px;
+              font-weight: $bold;
+              background: transparent;
+              width: 100%;
+              max-width: 100%;
+              border: none;
+              color: themed(dashboardBannerText);
+              border-bottom: 1px solid themed(dashboardBannerText);
+            }
+            .input-style-error, .textarea-style-error {
+              padding-bottom: 10px;
+              padding-left: 15px;
+              line-height: 27px;
+              font-size: 13px;
+              font-weight: $bold;
+              background: transparent;
+              width: 100%;
+              max-width: 100%;
+              border: solid red 1px;
+              color: themed(dashboardBannerText);
+              
+            }
+    
+            .textarea-style {
+              resize: none;
+              outline: none;
+            }
+    
+            input::placeholder, textarea::placeholder {
+              color: themed(dashboardBannerText);
+              font-size: 13px;
+              font-weight: $medium
+            }
+      
+            input:focus, textarea:focus {
+              transition: all 0.2s;
+              font-weight: $medium;
+              outline: 0 none;
+              cursor: text;
+            }
+          }
+          
+        }
+    
+        .contact-info {
+          padding-left: 62px;
+          padding-right: 10vw;
+          justify-content: flex-end;
+    
+          .contact-section-label {
+            letter-spacing: 1.7px;
+            padding-bottom: 18px;
+            color: themed(yellowPencil);
+          }
+          
+          .contact-section-title {
+            padding-bottom: 36px;
+            span {
+              color: themed(yellowPencil);
+            }
+          }
+    
+          .contact-section-description {
+            width: 90%;
+            padding-bottom: 36px;
+          }
+    
+          .contact-section-logo {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding-top: 46px;
+    
+            .logo-container {
+              width: 91px;
+              height: 30px;
+    
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
+
+
+      @media screen and (max-width: 800px) {
+        .section {
+          padding: 88px 12vw;
+    
+          .background-decoration {
+      
+            &::after {
+              visibility: hidden;
+            }
+          }
+          .section-text {
+            width: 100%;
+          }
+        }
+        
+        .services-row {
+          height: 260px;
+        }
+    
+        .row {
+          height: 189px;
+        }
+    
+        .pc-view-container {
+          flex-direction: column;
+    
+          .images-buttons-container {
+            width: 100%;
+    
+            .buttons-container {
+              padding: 15px 0px 15px 0px;
+            }
+          }
+          
+          .pc-view-description {
+            width: 100%;
+          }
+        }
+    
+        .tools-section {
+          padding: 50px 17vw;
+    
+          .background-decoration {
+      
+            &::after {
+              visibility: hidden;
+            }
+          }
+    
+          .poster-content {
+            flex-direction: column;
+    
+            .skills-container {
+              width: 100%;
+    
+              .skill-container {
+                .skill-icon {
+                  height: 49px;
+                  min-height: 49px;
+                  width: 49px;
+                  min-width: 49px;
+                }
+              }
+            }
+          }
+        }
+    
+        .experience-cases-gallery {
+          padding: 0px 8vw;
+    
+          .experience-case-container {
+            width: 100% !important;
+    
+            .experience-case {
+              margin-right: 0px !important;
+              height: 260px;
+            }
+          }
+        }
+    
+        .client-section {
+          padding: 88px 8vw;
+    
+          .background-decoration {
+      
+            &::after {
+              visibility: hidden;
+            }
+          }
+    
+          .client-list-container {
+    
+            .item-container:nth-child(3n + 2) {
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+    
+            .item-container:nth-child(2n) {
+              margin-left: 30px;
+              margin-right: 0px;
+            }
+      
+            .item-container {
+              width: calc(50% - 15px);
+            }
+          }
+        }
+    
+        .contact-section {
+          padding: 52px 0px;
+          flex-direction: column-reverse;
+    
+          .mobile-message-sending-container {
+            display: block;
+          }
+    
+          .contact-form {
+            width: 90%;
+            margin-top: 3rem;
+            height: 472px;
+    
+            .input-container {
+              padding-right: 47px;
+              width: 90%;
+            }
+          }
+    
+          .contact-info {
+            width: 100%;
+    
+            .desktop-message-sending-container {
+              display: none;
+            }
+    
+            .mobile-message-sending-container {
+              display: block;
+            }
+          }
+        }
+    
+      }
+    
+      @media screen and (max-width: 400px) {
+        .section {
+          padding: 68px 9vw;
+    
+          .background-decoration {
+      
+            &::after {
+              visibility: hidden;
+            }
+          }
+          .section-text {
+            width: 100%;
+          }
+        }
+    
+        .services-row {
+          height: 210px;
+        }
+    
+        .row {
+          height: 169px;
+        }
+    
+        .tools-section {
+          padding: 40px 14vw;
+    
+          .poster-content {
+            flex-direction: column;
+    
+            .skills-container {
+              width: 100%;
+    
+              .skill-container {
+                .skill-icon {
+                  height: 39px;
+                  min-height: 39px;
+                  width: 39px;
+                  min-width: 39px;
+                }
+              }
+            }
+          }
+        }
+    
+        .experience-cases-gallery {
+          padding: 0px 6vw;
+    
+          .experience-case-container {
+    
+            .experience-case {
+              height: 210px;
+            }
+          }
+        }
+    
+        .client-section {
+          padding: 68px 6vw;
+    
+          .client-list-container {
+    
+            .item-container:nth-child(2n) {
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+      
+            .item-container {
+              width: 100%;
+            }
+          }
+        }
+    
+        .contact-section {
+          padding: 42px 0px;
+    
+          .contact-form {
+            height: 422px;
+    
+            .input-container {
+              padding-right: 27px;
+            }
+          }
+        }
+      }
+    
+
+
+}

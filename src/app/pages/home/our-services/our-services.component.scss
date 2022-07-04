@@ -1,0 +1,95 @@
+@import '../../../theme/styles/styles.scss';
+
+@include themify() {
+
+.blue-words{
+    color: #004EE8;
+  }
+
+  .spaceman-container{
+    width: 100%;
+    height: calc(100vw / 4.26);
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../../../assets/img/homePage/stars-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    //background-color: white;
+  }
+
+  
+
+  .spaceman-text{
+    
+    
+    width: 50%;
+    
+  }
+
+  /*.spaceman{
+    
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+  }*/
+
+  .spaceman-indeed-text{
+    text-align: center;
+    font: normal normal bold 35px/40px Metropolis;
+    letter-spacing: 3.5px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+
+  .section {
+    width: 100%;
+    padding: 108px 15vw;
+    position: relative;
+
+    .background-decoration {
+      position: absolute;
+      right: 100px;
+      top: 0px;
+      height: 115px;
+      width: 230px;
+      border-radius: 0px 0px 17px 17px;
+      background-color: rgba(themed(yellowPencil), 0.15);
+
+      &::after {
+          content: '';
+          position: absolute;
+          top: 0px;
+          right: 60px;
+          display: block;
+          height: 200px;
+          width: 3px;
+          border-radius: 1px;
+          background-color: themed(yellowPencil);
+      }
+    }
+
+    .section-kicker {
+      color: themed(bluePencil);
+      padding-bottom: 18px;
+    }
+
+    .section-subtitle {
+      color: themed(regularText);
+      padding-bottom: 36px;
+
+      span {
+        color: themed(yellowPencil);
+      }
+    }
+
+    .section-text {
+      width: 70%;
+      color: themed(regularText);
+      padding-bottom: 40px;
+    }
+  }
+
+}

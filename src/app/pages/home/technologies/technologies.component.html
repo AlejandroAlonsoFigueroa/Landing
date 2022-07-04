@@ -1,0 +1,25 @@
+<div id="tools" class="tools-section">
+    <div class="background-decoration"></div>
+    <div class="fs-kicker poster-label">Tecnologías</div>
+    <div class="fs-subtitle poster-description">Creamos <span>las mejores aplicaciones</span> web basadas en <span>las tecnologías <br> más adecuadas</span> para cada solución.</div>
+    <div class="d-flex justify-content-space-between poster-content">
+        <div class="skills-container">
+            <div class="container-label fw-bold">BackEnd</div>
+            <div *ngFor="let item of backendSkills" class="d-flex skill-container backend">
+                <div class="skill-icon {{item.color}}">
+                    <i class="bwl-i bwl-{{item.icon}}"></i>
+                </div>
+                <div class="skill-description fs-text">{{item.description}}</div>
+            </div>
+        </div>
+        <div class="skills-container"> 
+            <div class="container-label fw-bold frontend">FrontEnd</div>
+            <div *ngFor="let item of frontendSkills" class="d-flex skill-container frontend">
+                <div class="skill-description fs-text">{{item.description}}</div>
+                <div class="skill-icon {{item.color}}">
+                    <i class="bwl-i bwl-{{item.icon}}"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

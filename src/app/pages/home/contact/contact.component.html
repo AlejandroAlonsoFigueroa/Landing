@@ -1,0 +1,72 @@
+<div class="contact-section">
+    <div class="d-flex mobile-message-sending-container">
+        <div class="d-flex justify-content-end">
+            <bwl-basic-button [size]="'medium'" [bgColor]="'blue'" [icon]="'bwl-i bwl-e900'">Enviar</bwl-basic-button> 
+        </div>
+        <div class="contact-section-logo">
+            <div class="logo-container">
+                <img src="./assets/img/svg/black_logo.svg"/>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact-form w-50 d-flex direction-column align-items-end" id = "moon-container">
+        <img class = "cable-spaceman"src = "./assets/img/homePage/cable-spaceman.svg">
+        <div class="input-container">
+            <input  [ngClass]="formBody.nameError == true  ? 'input-style-error' : 'input-style'" placeholder="Nombre" type="text" [(ngModel)]="formBody.name" required />
+        </div>
+        <div class="input-container">
+            <input [ngClass]="formBody.phoneError == true  ? 'input-style-error' : 'input-style'"  placeholder="Teléfono" type="text" [(ngModel)]="formBody.phone" required />
+        </div>
+        <div class="input-container">
+            <input [ngClass]="formBody.emailError == true  ? 'input-style-error' : 'input-style'"  placeholder="Correo Electrónico" type="text" [(ngModel)]="formBody.email" required />
+        </div>
+        <div class="input-container">
+            <textarea [ngClass]="formBody.messageError == true  ? 'input-style-error' : 'input-style'"  placeholder="Mensaje" type="text" [(ngModel)]="formBody.message" required></textarea>
+        </div>
+        <img class = "moon"src = "./assets/img/homePage/moon.svg">
+    </div>
+
+
+    <div class="d-flex direction-column contact-info w-50">
+        <div class="contact-section-label fs-kicker">Contacto</div>
+        <div class="contact-section-title fs-subtitle">Inicia <span>tu proyecto<br>con</span> nosotros</div>
+        <div class="contact-section-description fs-text">Desarrollamos soluciones
+             a la medida basados en las necesidades de nuestros clientes. Construimos 
+             y desplegamos las mejores aplicaciones para dar valor a los servicios y productos
+              que ofrecen nuestros clientes, a sus clientes.
+             Nuestro sello de garantía es la continuidad de nuestro trabajo, contigo.</div>
+
+        <div class="d-flex desktop-message-sending-container">
+            <!--bwl-basic-button [size]="'medium'" [bgColor]="'blue'" [icon]="'bwl-i bwl-e900'" (click) = "validateFields()">Enviar</bwl-basic-button>-->
+            <div class = "dark-button">
+                <p class = "dark-button-element">Enviar</p>
+
+                <p class = "dark-button-element"> -> </p>
+            </div>
+            
+            
+                 
+            <div class="contact-section-logo">
+                <div class="logo-container">
+                    <img src="./assets/img/svg/black_logo.svg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+    
+    
+
+
+
+
+
+
+
+
+    
+
+
+

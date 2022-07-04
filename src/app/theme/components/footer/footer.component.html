@@ -1,0 +1,50 @@
+<div class="footer-container">
+
+
+    <div class = "semicircle">
+
+    </div>
+    
+    <div class = "inner-footer">
+        <div class = "boxes-container">
+
+            <div>
+                <p class = "page" (click) = "navigate('whoWeAre')">{{pages[0].name}}</p>
+                <p class = "page" (click) = "navigate('experience')">{{pages[1].name}}</p>
+                <!--<p class = "page">{{pages[2].name}}</p>-->
+
+            </div>
+            
+            <div>
+                <p class = "page">{{pages[3].name}}</p>
+                <div *ngFor = "let element of bwlServices">
+                    <p class = "sub-page" (click) = "navigateDiffPage(element.link)">{{element.title}}</p>
+                </div>    
+            </div>
+                
+
+            
+            
+            <div>
+                <p class = "page" (click) = "goToPrivacyPolicy()">{{pages[4].name}}</p>
+                
+
+            </div>
+            
+            <div>
+                <p class = "social-media" ><a class = "yellow-text" href = "https://www.facebook.com/BWLTECHGROUP" target="_blank">{{socialMedia[0].name}}</a></p>
+                <p class = "social-media" ><a class = "yellow-text" href = "https://mx.linkedin.com/company/bwl-tech-group" target="_blank">{{socialMedia[1].name}}</a> </p>
+                <p class = "social-media"><a   class = "yellow-text"href = "https://www.instagram.com/bwl-tech-group" target="_blank">{{socialMedia[2].name}}</a></p>
+
+            </div>
+
+        </div>
+
+        <div class = "reserved-rights">
+            <p class = "text-indeed">© 2020 GRUPO TECNOLÓGICO BWL S. DE R.L DE C.V - TODOS LOS DERECHOS RESERVADOS</p>
+
+        </div>
+
+    </div>
+    
+</div>

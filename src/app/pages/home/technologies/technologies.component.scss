@@ -1,0 +1,368 @@
+@import '../../../theme/styles/styles.scss';
+
+@include themify() {
+    .tools-section {
+        background-color: themed(background);
+        width: 100%;
+        padding: 60px 20vw;
+        position: relative;
+    
+          .background-decoration {
+            position: absolute;
+            left: 0;
+            top: 50px;
+            height: 230px;
+            width: 115px;
+            border-radius: 0px 17px 17px 0px;
+            background-color: rgba(themed(redPencil), 0.15);
+    
+            &::after {
+                content: '';
+                position: absolute;
+                top: 60px;
+                left: 0px;
+                display: block;
+                height: 3px;
+                width: 230px;
+                border-radius: 1px;
+                background-color: themed(redPencil);
+            }
+        }
+    
+        .poster-label {
+          width: 100%;
+          text-align: center;
+          color: themed(redPencil);
+          padding-bottom: 18px;
+          letter-spacing: 1.7px;
+        }
+    
+        .poster-description {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+          color: themed(regularText);
+          padding-bottom: 30px;
+    
+          span {
+            color: themed(redPencil);
+          }
+        }
+    
+        .poster-content {
+    
+          .skills-container {
+            width: 45%;
+    
+            .container-label {
+              font-size: 14px;
+              color: themed(regularText);
+              padding-bottom: 14px;
+              padding-left: 11px;
+    
+              &.frontend {
+                padding-left: 0px;
+                padding-right: 11px;
+                text-align: right;
+              }
+            }
+    
+            .skill-container {
+              align-items: center;
+              padding: 11px 14px;
+              border-radius: 10px;
+              margin-bottom: 10px;
+        
+              transition: transform 0.3s ease-in-out;
+    
+              &.backend {
+                justify-content: flex-start;
+              }
+    
+              &.frontend {
+                justify-content: flex-end;
+    
+                .skill-description {
+                  text-align: right;
+                  padding-left: 0px;
+                  padding-right: 20px;
+                }
+              }
+    
+              .skill-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 59px;
+                min-height: 59px;
+                width: 59px;
+                min-width: 59px;
+                border-radius: 10px;
+    
+                i {
+                  font-size: 35px;
+                }
+    
+                &.blue {
+                  background-color: rgba(themed(bluePencil), .05);
+                  i {
+                    color: themed(bluePencil);
+                  }
+                }
+    
+                &.red {
+                  background-color: rgba(themed(redPencil), .05);
+                  i {
+                    color: themed(redPencil);
+                  }
+                }
+    
+                &.yellow {
+                  background-color: rgba(themed(yellowPencil), .05);
+                  i {
+                    color: themed(yellowPencil);
+                  }
+                }
+              }
+    
+              .skill-description {
+                padding-left: 20px;
+                color: themed(regularText);
+              } 
+            }
+    
+            .skill-container:hover {
+              transform: scale(1.1);
+              box-shadow: -3px 3px 7px #0000000D;
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 800px) {
+        .section {
+          padding: 88px 12vw;
+    
+          .background-decoration {
+      
+            &::after {
+              visibility: hidden;
+            }
+          }
+          .section-text {
+            width: 100%;
+          }
+        }
+        
+        .services-row {
+          height: 260px;
+        }
+    
+        .row {
+          height: 189px;
+        }
+    
+        .pc-view-container {
+          flex-direction: column;
+    
+          .images-buttons-container {
+            width: 100%;
+    
+            .buttons-container {
+              padding: 15px 0px 15px 0px;
+            }
+          }
+          
+          .pc-view-description {
+            width: 100%;
+          }
+        }
+    
+        .tools-section {
+          padding: 50px 17vw;
+    
+          .background-decoration {
+      
+            &::after {
+              visibility: hidden;
+            }
+          }
+    
+          .poster-content {
+            flex-direction: column;
+    
+            .skills-container {
+              width: 100%;
+    
+              .skill-container {
+                .skill-icon {
+                  height: 49px;
+                  min-height: 49px;
+                  width: 49px;
+                  min-width: 49px;
+                }
+              }
+            }
+          }
+        }
+    
+        .experience-cases-gallery {
+          padding: 0px 8vw;
+    
+          .experience-case-container {
+            width: 100% !important;
+    
+            .experience-case {
+              margin-right: 0px !important;
+              height: 260px;
+            }
+          }
+        }
+    
+        .client-section {
+          padding: 88px 8vw;
+    
+          .background-decoration {
+      
+            &::after {
+              visibility: hidden;
+            }
+          }
+    
+          .client-list-container {
+    
+            .item-container:nth-child(3n + 2) {
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+    
+            .item-container:nth-child(2n) {
+              margin-left: 30px;
+              margin-right: 0px;
+            }
+      
+            .item-container {
+              width: calc(50% - 15px);
+            }
+          }
+        }
+    
+        .contact-section {
+          padding: 52px 0px;
+          flex-direction: column-reverse;
+    
+          .mobile-message-sending-container {
+            display: block;
+          }
+    
+          .contact-form {
+            width: 90%;
+            margin-top: 3rem;
+            height: 472px;
+    
+            .input-container {
+              padding-right: 47px;
+              width: 90%;
+            }
+          }
+    
+          .contact-info {
+            width: 100%;
+    
+            .desktop-message-sending-container {
+              display: none;
+            }
+    
+            .mobile-message-sending-container {
+              display: block;
+            }
+          }
+        }
+    
+      }
+    
+      @media screen and (max-width: 400px) {
+        .section {
+          padding: 68px 9vw;
+    
+          .background-decoration {
+      
+            &::after {
+              visibility: hidden;
+            }
+          }
+          .section-text {
+            width: 100%;
+          }
+        }
+    
+        .services-row {
+          height: 210px;
+        }
+    
+        .row {
+          height: 169px;
+        }
+    
+        .tools-section {
+          padding: 40px 14vw;
+    
+          .poster-content {
+            flex-direction: column;
+    
+            .skills-container {
+              width: 100%;
+    
+              .skill-container {
+                .skill-icon {
+                  height: 39px;
+                  min-height: 39px;
+                  width: 39px;
+                  min-width: 39px;
+                }
+              }
+            }
+          }
+        }
+    
+        .experience-cases-gallery {
+          padding: 0px 6vw;
+    
+          .experience-case-container {
+    
+            .experience-case {
+              height: 210px;
+            }
+          }
+        }
+    
+        .client-section {
+          padding: 68px 6vw;
+    
+          .client-list-container {
+    
+            .item-container:nth-child(2n) {
+              margin-left: 0px;
+              margin-right: 0px;
+            }
+      
+            .item-container {
+              width: 100%;
+            }
+          }
+        }
+    
+        .contact-section {
+          padding: 42px 0px;
+    
+          .contact-form {
+            height: 422px;
+    
+            .input-container {
+              padding-right: 27px;
+            }
+          }
+        }
+      }
+
+}

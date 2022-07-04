@@ -1,0 +1,64 @@
+<div class="main-carousel-jumbotron">
+    <div class="linear-background"></div>
+    
+    <div [ngStyle]="{'background-image': 'url(' + background + ')' }" class="carousel-animated-media"></div>
+    <div *ngIf="incomeSlide && incomeSlide.type == 'image'"
+        [ngStyle]="{'background-image': 'url(' + incomeSlide?.source + ')' }"
+        class="carousel-animated-media-2 animated-medium {{sliderAnimation}}"></div>
+
+   
+
+    <div class="carousel-titles">
+        <div class="main-titles-container">
+            <div class="slide-title fw-bold" [innerHTML]="activeText"></div>
+            <div class="main-slides-selector-container shadow">
+                <div class="circle-border" *ngFor="let item of slides; let index = index" (click)="setActiveSlide(index)"
+                [ngClass]="{ active: !incomeSlide && item.active || incomeSlide?.source == item.source}">
+                    <div class="slide-selector-button"></div>
+                </div>
+            </div>
+            <img *ngIf="activeImage" class="slide-logo animated fadeInRight" [src]="activeImage" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- My code-->
+
+<!--
+<div class = "carousel-container">
+   
+
+        <div class = "buttons-container">
+            <div style="position: absolute; left: 500px; top: 500px; z-index:7;" (click) = "hola()">Hola</div>
+
+
+            <div class = "boxes-container">
+                
+                <div class = "box1">
+                    <img src = "./assets/img/homePage/Slider1.png" width = "100%" style = "position: absolute; top: -10vw;">
+                </div>
+                <div class = "box1">
+                    <img src = "./assets/img/homePage/Slider2.png" width = "100%" style = "position: absolute; top: -10vw;">
+                </div>
+                <div class = "box1">
+                    <img src = "./assets/img/homePage/Slider3.png" width = "100%" style = "position: absolute; top: -10vw;">
+                </div>
+               
+            </div>
+           
+
+        </div>
+       
+    
+
+
+</div>
+
+<div style = "margin-top:90px;">
+    <button (click) = "moverCarrusel(0)">Mover carrusel</button>
+    <button (click) = "moverCarrusel(1)">Mover carrusel</button>
+    <button (click) = "moverCarrusel(2)">Mover carrusel</button>
+
+</div>
+
+-->

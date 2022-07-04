@@ -1,0 +1,175 @@
+<!-- Hay que partirlo en componentes, para que te de la coordenada individual de cada sección-->
+
+
+
+<div class="home-page-container">
+
+
+<!-- CAROUSEL -->
+
+
+<div [style.height.px]="mainCarrouselHeight" class="landing-page">
+    <bwl-carousel style = "border-radius: 0 0 100px 100px;" [slides]="slides" id = "frontpage-carousel"></bwl-carousel>
+</div>
+
+
+
+<!-- WHO WE ARE -->
+<bwl-who-we-are id = "whoWeAre"></bwl-who-we-are>
+
+
+<!-- OUR SERVICES -->
+<div style = "background-color: white;">
+<bwl-our-services  id = "services"></bwl-our-services>
+</div>
+
+<div style = "background-color: white;">
+<div  class="section">
+    <div class="background-decoration"></div>
+    <div class="fs-kicker section-kicker">Servicios</div>
+    <div class="fs-subtitle section-subtitle" >
+         
+         Lanzamos <span>nuestra   imaginación </span><br> en cada proyecto 
+    </div>
+    <div class = "services-text" >
+        Desarrollamos aplicaciones móviles y 
+        plataformas web de alto nivel a la medida
+         del negocio de nuestros clientes para generar
+          valor en sus procesos y operaciones.
+         Nuestros desarrollos se basan en las 
+         tecnologías más modernas y adecuadas a cada solución.
+    </div>
+    <div class="services-row">
+        <div class="main-carousel" #mainContainer>
+            <div *ngIf="showPrev" class="carousel-btn prev" (click)="scrollCarouselLess(versionsCarousel, mainContainer)">
+                <i class="bwl-i bwl-e902"></i>
+            </div>
+            <div *ngIf="showNext" class="carousel-btn next" (click)="scrollCarouselMore(versionsCarousel, mainContainer)">
+                <i class="bwl-i bwl-e902"></i>
+            </div>
+            <div class="services-carousel-container" #versionsCarousel>
+                <div class="service-card-wrapper" *ngFor="let item of serviceCards">
+                   
+                    
+                    <bwl-service-card
+                        (click) = "navigate(item.link)"
+                        [image]="item.image"
+                        [title]="item.title"
+                        [link]="item.link">
+                    </bwl-service-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- Technologies-->
+<bwl-technologies id = "technologies"></bwl-technologies>   
+
+
+<!-- Experiences -->
+<bwl-experience id="experience" ></bwl-experience>
+    <div class="experience-cases-gallery">
+        <div [style.width.%]="item.width" *ngFor="let item of experienceCases" class="experience-case-container">
+            <div [ngClass]="item.positionText" class="experience-case">
+                <img [src]="item.image" class="image-style"/>
+                <div class="info-text">
+                    <div class="title fw-extra">{{item.title}}</div>
+                    <div class="description fw-regular" [innerHtml]="item.description"></div>
+                </div>
+                <div [ngClass]="[item.backgroundColor, 'linear-background']"></div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</div>
+
+<!--Reviews-->
+<bwl-reviews id = "reviews"></bwl-reviews>
+
+
+
+   
+
+<!-- CONTACT -->
+<bwl-contact id="contact"></bwl-contact>
+
+
+
+
+
+<!-- SIDE MENU -->
+
+
+<div class = "side-menu">
+
+  
+    <div class = "menu-element" *ngFor = "let element of menuElements">
+        <div class = "section-name" (click) = "sideBarNavigate(element.section)">
+             <p [ngClass]="element.isSelected == true  ? 'selected' : 'nonSelected'">{{element.realText}}</p>
+        </div>
+
+        <div [ngClass]="element.isSelected == true  ? 'markSelected' : 'markNonSelected'">
+
+        </div>
+    </div>
+</div>
+
+
+ 
+
+
+   
+    
+
+
+    
+  
+   
+    <!--<div class="row">
+        <div class="row-label fs-kicker">Nosotros</div>
+         
+        <div class="row-title fs-title">Imaginamos <span class="fw-extra"> juntos y trabajamos</span> de la mano</div>
+    </div>
+    <div class="section">
+        <div class="d-flex pc-view-container">
+            <div class="d-flex direction-column w-70 images-buttons-container">
+                <div class="h-90">
+                    <img *ngIf="pcCarrousel[0].position === pcImageStep" [ngClass]="[mainAppAnimation, 'animated-medium', 'image-style']" [src]="pcCarrousel[0].image"/>  
+                    <img *ngIf="pcCarrousel[1].position === pcImageStep" [ngClass]="[mainAppAnimation, 'animated-medium', 'image-style']" [src]="pcCarrousel[1].image"/>   
+                    <img *ngIf="pcCarrousel[2].position === pcImageStep" [ngClass]="[mainAppAnimation, 'animated-medium', 'image-style']" [src]="pcCarrousel[2].image"/>    
+                </div>
+                <div class="h-10 buttons-container">
+                    <div class="circle-button" (click)="setPcImageIndex(null, 1)" [ngClass]="{'active': pcImageStep === 1}" [style.marginLeft.px]="0"><div class="slide-selector-button"></div></div>
+                    <div class="circle-button" (click)="setPcImageIndex(null, 2)" [ngClass]="{'active': pcImageStep === 2}"><div class="slide-selector-button"></div></div>
+                    <div class="circle-button" (click)="setPcImageIndex(null, 3)" [ngClass]="{'active': pcImageStep === 3}"><div class="slide-selector-button"></div></div>
+                </div>
+            </div>
+            <div class="w-30 pc-view-description">
+                <div class="d-flex direction-column story-container h-90">
+                    <div class="story-description fs-text">
+                        Somos una empresa de consultoría de software joven
+                         y en constante evolución. Nuestro equipo de trabajo se conforma 
+                         de jóvenes inquietos con gran pasión a la tecnología y gente con 
+                         experiencia que le da un toque especial a cada desarrollo. Utilizamos
+                          los entornos de programación de software más modernos como preparación
+                           para los retos del mañana y entregamos soluciones 
+                        completas que permitan resolver necesidades específicas de nuestros clientes.
+                    </div>
+                    <div class="story-title">
+
+                         
+                        <div class="fs-subtitle subtitle">"Creamos <span>soluciones </span> grandiosas <span>para ti"</span></div>
+                        <div class="more-info fw-regular" (click) = "navigate2()"><div class="link">Ver más <strong>+</strong></div></div>
+                    </div>
+                </div>
+                <div class="h-10"></div>
+            </div>
+        </div>
+    </div>
+
+-->
